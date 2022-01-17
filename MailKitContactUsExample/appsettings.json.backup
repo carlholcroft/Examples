@@ -1,0 +1,21 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=MailKitContactUsExample;Trusted_Connection=True;MultipleActiveResultSets=true"
+  },
+  //Change
+  "EmailAccount": "Change me",
+  "EmailSettings": {
+    "MailServer": "Change Me",
+    "MailPort": 465,
+    "SenderName": "Change me",
+    "Sender": "Change Me",
+    "Password": "Change Me"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

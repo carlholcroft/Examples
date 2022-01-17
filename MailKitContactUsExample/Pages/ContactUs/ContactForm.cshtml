@@ -1,0 +1,39 @@
+﻿@page
+@model MailKitContactUsExample.Pages.ContactUs.ContactFormModel
+@{
+}
+ <div class="row">
+    <div class="col-md-4">
+        <form id="contactForm" asp-route-returnUrl="@Model.Contact" method="post">
+            <h2>Contact us.</h2>
+            <p>Fill in the form to get in touch with us.</p>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating">
+                <input asp-for="Contact.Name" class="form-control"  placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name." />
+                <label asp-for="Contact.Name"></label>
+                <span asp-validation-for="Contact.Name" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Contact.Email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address." />
+                <label asp-for="Contact.Email"></label>
+                <span asp-validation-for="Contact.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Contact.Subject" class="form-control" placeholder="subject *" id="name" required data-validation-required-message="Please enter subject." />
+                <label asp-for="Contact.Subject"></label>
+                <span asp-validation-for="Contact.Subject" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control" name="Contact.Message" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message." ></textarea>
+                <label asp-for="Contact.Message"></label>
+                <span asp-validation-for="Contact.Message" class="text-danger"></span>
+             </div>
+             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Submit</button>
+         </form>
+    </div>
+ </div> 
+ 
+     @section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+ }
